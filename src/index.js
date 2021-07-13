@@ -16,6 +16,6 @@ document.getElementById("cifrar").addEventListener("click", (event) => {
     let resultado = cipher.encode(offset, string);
     let visualizarResultado = document.getElementById("output");
     visualizarResultado.value = resultado;
-})
 
-console.log(cipher);
+    console.log(resultado);
+})

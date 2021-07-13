@@ -3,14 +3,14 @@ const cipher = {
     // esto es porque dichos valores se extraerían del DOM y de esta manera pueden quedar como 'variables globales'
 
     encode: function(string, offset) {
-        string = string.trim(); //.trim sirve para...
+        // string = string.trim(); //.trim sirve para...
 
         // en estas variables se guardarán el resultado la(s) letra(s) que se mostrarán y su valor en ascii
         let valorAscii = 0;
         let resultado = "";
 
         //se usa el for para recorrer nuestro string y así poder obtener la posición de nuestras letras en el alfabeto
-        for (i = 0; i < string.length; i++) {
+        for (let i = 0; i < string.length; i++) {
             let mensaje_ascii = string.charCodeAt(i);
 
             //como los valores de las mayusculas en código ascii se encuentran entre 65 y 90 se usa la siguiente condición
@@ -46,7 +46,7 @@ const cipher = {
         let valorAscii = 0;
         let resultado = "";
 
-        for (i = 0; i < string.length; i++) {
+        for (let i = 0; i < string.length; i++) {
             let mensaje_ascii = string.charCodeAt(i);
 
             if ((mensaje_ascii >= 65) && (mensaje_ascii < 91)) {
