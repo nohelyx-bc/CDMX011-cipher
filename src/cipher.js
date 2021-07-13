@@ -1,22 +1,71 @@
-//const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+const cipher = {
+    // originalmente tenía declaradas las variables para el desplazamiento y el mensaje a encriptar pero ahora he decidido declararlas en el archivo de indes
+    // esto es porque dichos valores se extraerían del DOM y de esta manera pueden quedar como 'variables globales'
 
-let desplazamiento = 4;
-let mensaje = "MI MENSAJE SECRETO";
+    encode: function(string, offset) {
+        string = string.trim(); //.trim sirve para...
 
-mensaje = mensaje.trim();
+        // en estas variables se guardarán el resultado la(s) letra(s) que se mostrarán y su valor en ascii
+        let valorAscii = 0;
+        let resultado = "";
+
+        //se usa el for para recorrer nuestro string y así poder obtener la posición de nuestras letras en el alfabeto
+        for (i = 0; i < string.length; i++) {
+            let mensaje_ascii = string.charCodeAt(i);
+
+            //como los valores de las mayusculas en código ascii se encuentran entre 65 y 90 se usa la siguiente condición
+            if ((mensaje_ascii >= 65) && (mensaje_ascii < 91)) {
+                valorAscii = ((mensaje_ascii - 65 + offset) % 26) + 65;
+            }
+
+            //Se realiza el mismo procedimiento con las minúsculas que sus valores ascii están entre el 97 y 123, de manera que la condición usada:
+            else if ((mensaje_ascii >= 97) && (mensaje_ascii < 123)) {
+                valorAscii = ((mensaje_ascii - 97 + offset) % 26) + 97;
+            }
+
+            //como el valor de espacio es 32 entonces usamos modulo de 1, ya que no necesitamos desplazarlo
+            //aunque no se necesite desplazarlo sí es necesario parametrizarlo, de manera que igual que con las condiciones anteriores
+            else {
+                valorAscii = ((mensaje_ascii) % 1) + 32;
+            }
+
+            let string_encode = String.fromCharCode(valorAscii);
+
+            resultado += string_encode;
+
+        }
+
+        return resultado;
+
+    },
 
 
-//se define la función para nuestro cipher
-function encode(string, offset) {
-    let valorAscii = mensaje.charCodeAt(i);
 
-    //como las mayusculas se encuentran en un rango de 65 y 90 en valores ascii entonces para nuestra formula de cifrado
-    if (valorAscii >= 65 && <= 90) {
-        desplazo = (valorAscii - 65 + 3) % 26 + 65;
+    decode: function(string, offset) {
+        string = string.trim();
+        let valorAscii = 0;
+        let resultado = "";
+
+        for (i = 0; i < string.length; i++) {
+            let mensaje_ascii = string.charCodeAt(i);
+
+            if ((mensaje_ascii >= 65) && (mensaje_ascii < 91)) {
+                valorAscii = ((mensaje_ascii + 65 - offset) % 26) + 65;
+            } else if ((mensaje_ascii >= 97) && (mensaje_ascii < 123)) {
+                valorAscii = ((mensaje_ascii + 97 - offset) % 26) + 97;
+            } else {
+                valorAscii = ((mensaje_ascii) % 1) + 32;
+            }
+
+            let string_decode = String.fromCharCode(valorAscii);
+
+            resultado += string_decode;
+        }
+
+        return resultado;
+
     }
-}
 
+};
 
-export function encode(cipher) {
-    console.log
-}
+export default cipher;

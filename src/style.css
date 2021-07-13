@@ -1,3 +1,11 @@
 :root {
-    background-color: mediumorchid;
+    background-color: lightpink;
+}
+
+.title {
+    font-family: 'Josefin Slab', serif;
+}
+
+.textos {
+    font-family: 'Josefin Sans', sans-serif;
 }
