@@ -1,11 +1,75 @@
 :root {
-    background-color: lightpink;
+    background-color: #fe938c;
 }
 
-.title {
+h1 {
     font-family: 'Josefin Slab', serif;
+    font-size: 96px;
+    text-align: center;
+}
+
+.cat {
+    width: 120px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+h2 {
+    font-family: 'Josefin Slab', serif;
+    font-size: 36px;
+    text-align: center;
 }
 
 .textos {
     font-family: 'Josefin Sans', sans-serif;
+    font-size: 24px;
+    padding: 24px;
+}
+
+.items {
+    padding: 64 px;
+    position: relative;
+    justify-content: center;
+}
+
+button {
+    background: linear-gradient(180deg, #4281a4 10%, #9cafb7 90%);
+    border-radius: 25px;
+    font-family: 'Josefin Slab', serif;
+    font-size: 48px;
+    text-align: center;
+    color: white;
+    border: none;
+    width: 360px;
+    height: 85px;
+    margin: 100px;
+}
+
+.cipher {
+    display: flex;
+    align-content: center;
+    position: relative;
+    justify-content: center;
+    background-color: #ead2ac;
+    border: none;
+    border-radius: 25px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: xx-large;
+    text-align: center;
+    height: 60px;
+}
+
+.censor {
+    width: 350px;
+    height: 350px;
+    padding: 48px;
+}
+
+.tematica {
+    display: flex;
 }

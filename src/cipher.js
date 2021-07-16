@@ -2,7 +2,7 @@ const cipher = {
     // originalmente tenía declaradas las variables para el desplazamiento y el mensaje a encriptar pero ahora he decidido declararlas en el archivo de indes
     // esto es porque dichos valores se extraerían del DOM y de esta manera pueden quedar como 'variables globales'
 
-    encode: function(string, offset) {
+    encode: function(offset, string) {
         // string = string.trim(); //.trim sirve para...
 
         // en estas variables se guardarán el resultado la(s) letra(s) que se mostrarán y su valor en ascii
@@ -35,13 +35,15 @@ const cipher = {
 
         }
 
+        //console.log(resultado);
+
         return resultado;
 
     },
 
 
 
-    decode: function(string, offset) {
+    decode: function(offset, string) {
         string = string.trim();
         let valorAscii = 0;
         let resultado = "";
@@ -52,7 +54,7 @@ const cipher = {
             if ((mensaje_ascii >= 65) && (mensaje_ascii < 91)) {
                 valorAscii = ((mensaje_ascii + 65 - offset) % 26) + 65;
             } else if ((mensaje_ascii >= 97) && (mensaje_ascii < 123)) {
-                valorAscii = ((mensaje_ascii + 97 - offset) % 26) + 97;
+                valorAscii = ((mensaje_ascii - 122 - offset) % 26) + 122;
             } else {
                 valorAscii = ((mensaje_ascii) % 1) + 32;
             }

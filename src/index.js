@@ -1,21 +1,45 @@
 import cipher from './cipher.js';
 
-//se declaran las variables 'globales' que en este caso serían el numero de desplazamiento  y el mensaje a encriptar
-let string = document.getElementById("string").value;
-let offset = document.getElementById("offset").value;
-
-console.log(string);
-console.log(offset);
+const output = document.getElementById("output");
+const container = document.getElementById("container");
+const items = document.getElementById("items");
 
 
 document.getElementById("cifrar").addEventListener("click", (event) => {
     event.preventDefault();
-    //se declaran las variables 'globales' que en este caso serían el numero de desplazamiento  y el mensaje a encriptar
-    offset = parseInt(offset); //no olvidar usar el ParseInt que es lo que nos permite tomar el vaslor numerico
+    cipher.offset = Number(document.getElementById('offset').value);
+    cipher.string = document.getElementById('string').value;
+    cipher.encode(cipher.offset, cipher.string);
+    output.innerHTML += cipher.encode(cipher.offset, cipher.string);
+});
 
-    let resultado = cipher.encode(offset, string);
-    let visualizarResultado = document.getElementById("output");
-    visualizarResultado.value = resultado;
 
-    console.log(resultado);
-})
+document.getElementById("descifrar").addEventListener("click", (event) => {
+    event.preventDefault();
+    cipher.offset = Number(document.getElementById('offset').value);
+    cipher.string = document.getElementById('string').value;
+    cipher.decode(cipher.offset, cipher.string);
+    output.innerHTML += cipher.decode(cipher.offset, cipher.string);
+});
+
+
+document.getElementById("copiar").addEventListener("click", (event) => {
+    event.preventDefault();
+    output.select();
+    output.setSelectionRange(0, 999999);
+    document.execCommand("copy");
+});
+
+/*
+document.getElementById("limpiar").addEventListener("click", (event) => {
+    event.preventDefault();
+    let offset = document.getElementById("offset").value = "";
+    let string = document.getElementById("string").value = "";
+    let output = document.getElementById("output").innerHTML = "";
+}); */
+
+document.getElementById("cambiarPantalla").addEventListener("click", (event) => {
+    event.preventDefault();
+    container.style.display = "none";
+    items.style.display = "inline";
+});
