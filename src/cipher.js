@@ -3,7 +3,7 @@ const cipher = {
     // esto es porque dichos valores se extraerían del DOM y de esta manera pueden quedar como 'variables globales'
 
     encode: function(offset, string) {
-        // string = string.trim(); //.trim sirve para...
+        string = string.trim(); //.trim sirve para...
 
         // en estas variables se guardarán el resultado la(s) letra(s) que se mostrarán y su valor en ascii
         let valorAscii = 0;
