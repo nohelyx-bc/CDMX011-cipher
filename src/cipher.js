@@ -1,9 +1,7 @@
 const cipher = {
-    // originalmente tenía declaradas las variables para el desplazamiento y el mensaje a encriptar pero ahora he decidido declararlas en el archivo de indes
-    // esto es porque dichos valores se extraerían del DOM y de esta manera pueden quedar como 'variables globales'
 
     encode: function(offset, string) {
-        string = string.trim(); //.trim sirve para...
+        string = string.trim(); //.trim sirve para eliminar cualquier espacio en blanco que tengamos a la izq o der 
 
         // en estas variables se guardarán el resultado la(s) letra(s) que se mostrarán y su valor en ascii
         let valorAscii = 0;
@@ -21,9 +19,10 @@ const cipher = {
             //Se realiza el mismo procedimiento con las minúsculas que sus valores ascii están entre el 97 y 123, de manera que la condición usada:
             else if ((mensaje_ascii >= 97) && (mensaje_ascii < 123)) {
                 valorAscii = ((mensaje_ascii - 97 + offset) % 26) + 97;
-            } else if ((mensaje_ascii >= 33) && (mensaje_ascii <= 64)) {
-                valorAscii = ((mensaje_ascii - 33 + offset) % 26) + 33;
             }
+            /* else if ((mensaje_ascii >= 33) && (mensaje_ascii <= 64)) {
+                        valorAscii = ((mensaje_ascii - 33 + offset) % 26) + 33;
+                       } */
 
             //como el valor de espacio es 32 entonces usamos modulo de 1, ya que no necesitamos desplazarlo
             //aunque no se necesite desplazarlo sí es necesario parametrizarlo, de manera que igual que con las condiciones anteriores
@@ -55,11 +54,14 @@ const cipher = {
 
             if ((mensaje_ascii >= 65) && (mensaje_ascii < 91)) {
                 valorAscii = ((mensaje_ascii + 65 - offset) % 26) + 65;
-            } else if ((mensaje_ascii >= 97) && (mensaje_ascii < 123)) {
+            }
+            //para el desencriptado minusculas se tomó el limite final en vez del principio
+            else if ((mensaje_ascii >= 97) && (mensaje_ascii < 123)) {
                 valorAscii = ((mensaje_ascii - 122 - offset) % 26) + 122;
-            } else if ((mensaje_ascii >= 33) && (mensaje_ascii <= 64)) {
-                valorAscii = ((mensaje_ascii - 64 - offset) % 26) + 64;
-            } else {
+            }
+            /* else if ((mensaje_ascii >= 33) && (mensaje_ascii <= 64)) {
+                valorAscii = ((mensaje_ascii - 64 - offset) % 26) + 64;}*/
+            else {
                 valorAscii = ((mensaje_ascii) % 1) + 32;
             }
 

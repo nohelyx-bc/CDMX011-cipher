@@ -5,7 +5,8 @@ const output = document.getElementById("output");
 
 
 document.getElementById("cifrar").addEventListener("click", (event) => {
-    event.preventDefault();
+    //el .addEventListener nos permite añadir un evento en el Id seleccionado, en este caso con el click
+    event.preventDefault(); //esto previene la función boton por default y así no se nos actualice la pag.
     let offset = Number(document.getElementById('offset').value);
     if (offset == "") {
         alert("¡No olvides introducir el valor de tu desplazamiento!")

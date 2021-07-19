@@ -21,8 +21,9 @@ h1 {
 
 .tematica {
     display: flex;
-    weight: 85%;
+    width: 85%;
     height: 400px;
+    margin: 75px;
 }
 
 .textos {
@@ -38,7 +39,7 @@ h1 {
 }
 
 p {
-    margin: 32px;
+    margin: 18px;
 }
 
 .inputs {
@@ -87,6 +88,10 @@ h2 {
 .resultado {
     display: flex;
     justify-content: center;
+}
+
+#output {
+    width: 500px;
 }
 
 .copiar {
