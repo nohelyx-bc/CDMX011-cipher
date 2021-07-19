@@ -2,6 +2,13 @@
     background-color: #fe938c;
 }
 
+header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
 h1 {
     font-family: 'Josefin Slab', serif;
     font-size: 96px;
@@ -12,17 +19,8 @@ h1 {
     width: 120px;
 }
 
-header {
+.tematica {
     display: flex;
-    align-items: center;
-    position: relative;
-    justify-content: center;
-}
-
-h2 {
-    font-family: 'Josefin Slab', serif;
-    font-size: 36px;
-    text-align: center;
 }
 
 .textos {
@@ -31,9 +29,18 @@ h2 {
     padding: 24px;
 }
 
-.items {
-    padding: 64 px;
-    position: relative;
+.censor {
+    width: 350px;
+    height: 350px;
+    padding: 48px;
+}
+
+p {
+    margin: 18px;
+}
+
+.inputs {
+    display: flex;
     justify-content: center;
 }
 
@@ -50,11 +57,12 @@ button {
     margin: 100px;
 }
 
-.cipher {
+.funciones {
     display: flex;
-    align-content: center;
-    position: relative;
     justify-content: center;
+}
+
+.cipher {
     background-color: #ead2ac;
     border: none;
     border-radius: 25px;
@@ -64,12 +72,18 @@ button {
     height: 60px;
 }
 
-.censor {
-    width: 350px;
-    height: 350px;
-    padding: 48px;
+h2 {
+    font-family: 'Josefin Slab', serif;
+    font-size: 36px;
+    text-align: center;
 }
 
-.tematica {
+.resultado {
     display: flex;
+    justify-content: center;
+}
+
+.copiar {
+    display: flex;
+    justify-content: center;
 }

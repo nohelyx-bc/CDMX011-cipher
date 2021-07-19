@@ -15,46 +15,48 @@
 <body>
 
     <script src="index.js" type="module"></script>
-    <div class="container" id="container">
-        <header>
-            <h1 class="title" id="bienvenida">¡BIENVENIDX!</h1>
-            <img class="cat" src="assets/cat.gif">
-        </header>
-        <div class="tematica">
-            <img class="censor" src="assets/censorship.png">
-            <p class="textos">Actualmente las redes sociales son un medio para comunicarnos muy importante, casi esencial, es por esta razón que muchos temas aún se siguen censurando, por lo que esta herramienta te servirá para evitar la censura, ya sea cuando quieras
-                hablar de temas LGBTQ+, sexualidad, feminismo, etc. Lo conseguirás cifrando las palabras para que sean indectables ante el algoritmo.
-            </p>
-        </div>
+    <header>
+        <h1 class="title" id="bienvenida">¡BIENVENIDX!</h1>
+        <img class="cat" src="assets/cat.gif">
+    </header>
+    <div class="tematica">
+        <img class="censor" src="assets/censorship.png">
+        <p class="textos">Actualmente las redes sociales son un medio para comunicarnos muy importante, casi esencial, es por esta razón que muchos temas aún se siguen censurando, por lo que esta herramienta te servirá para evitar la censura, ya sea cuando quieras hablar
+            de temas LGBTQ+, sexualidad, feminismo, etc. Lo conseguirás cifrando las palabras para que sean indectables ante el algoritmo.
+        </p>
     </div>
 
     <br>
-    <div class="items" id="items">
-        <form>
-            <div class="inputs">
-                <table>
-                    <tr>
-                        <td class="textos">Número de desplazamiento: </td>
-                        <td>
-                            <input type="number" class="cipher" name="desplazamiento" id="offset" min="1" max="100" required/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="textos">Mensaje que deseas encriptar: </td>
-                        <td>
-                            <input type="text" class="cipher" name="mensaje" id="string" pattern="[A-Z ]" required/>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-
+    <form>
+        <div class="inputs">
+            <table>
+                <tr>
+                    <td class="textos">Número de desplazamiento: </td>
+                    <td>
+                        <input type="number" class="cipher" name="desplazamiento" id="offset" min="1" max="100" required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="textos">Mensaje que deseas encriptar: </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" class="cipher" name="mensaje" id="string" pattern="[A-Z ]" required/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="funciones">
             <button type="button" id="cifrar">CIFRAR</button>
             <button type="button" id="descifrar">DESCIFRAR</button>
-        </form>
+        </div>
+    </form>
 
-        <h2 class="title">Aquí tienes tu mensaje cifrado/descifrado, ¡Espero que te ayude!</h2>
-        <textarea type="text" id="output" class="cipher"></textarea>
-        <br>
+    <h2 class="title">Aquí tienes tu mensaje cifrado/descifrado, ¡Espero que te ayude!</h2>
+    <div class="resultado">
+        <textarea type="text" id="output" class="cipher"></textarea> </div>
+    <br>
+    <div class="copiar">
         <button type="button" id="copiar">COPIAR</button>
     </div>
 
