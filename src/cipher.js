@@ -21,6 +21,8 @@ const cipher = {
             //Se realiza el mismo procedimiento con las minúsculas que sus valores ascii están entre el 97 y 123, de manera que la condición usada:
             else if ((mensaje_ascii >= 97) && (mensaje_ascii < 123)) {
                 valorAscii = ((mensaje_ascii - 97 + offset) % 26) + 97;
+            } else if ((mensaje_ascii >= 33) && (mensaje_ascii <= 64)) {
+                valorAscii = ((mensaje_ascii - 33 + offset) % 26) + 33;
             }
 
             //como el valor de espacio es 32 entonces usamos modulo de 1, ya que no necesitamos desplazarlo
@@ -55,6 +57,8 @@ const cipher = {
                 valorAscii = ((mensaje_ascii + 65 - offset) % 26) + 65;
             } else if ((mensaje_ascii >= 97) && (mensaje_ascii < 123)) {
                 valorAscii = ((mensaje_ascii - 122 - offset) % 26) + 122;
+            } else if ((mensaje_ascii >= 33) && (mensaje_ascii <= 64)) {
+                valorAscii = ((mensaje_ascii - 64 - offset) % 26) + 64;
             } else {
                 valorAscii = ((mensaje_ascii) % 1) + 32;
             }

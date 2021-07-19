@@ -1,5 +1,5 @@
 :root {
-    background-color: #fe938c;
+    background-color: #EFCDFF;
 }
 
 header {
@@ -21,11 +21,13 @@ h1 {
 
 .tematica {
     display: flex;
+    weight: 85%;
+    height: 400px;
 }
 
 .textos {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 20px;
+    font-size: 22px;
     padding: 24px;
 }
 
@@ -36,7 +38,7 @@ h1 {
 }
 
 p {
-    margin: 18px;
+    margin: 32px;
 }
 
 .inputs {
@@ -45,16 +47,16 @@ p {
 }
 
 button {
-    background: linear-gradient(180deg, #4281a4 10%, #9cafb7 90%);
+    background: linear-gradient(180deg, #A584FF 10%, #3A29A3 90%);
     border-radius: 25px;
     font-family: 'Josefin Slab', serif;
-    font-size: 48px;
+    font-size: 24px;
     text-align: center;
     color: white;
     border: none;
-    width: 360px;
-    height: 85px;
-    margin: 65px;
+    width: 200px;
+    height: 45px;
+    margin: 45px;
 }
 
 .funciones {
@@ -63,18 +65,22 @@ button {
 }
 
 .cipher {
-    background-color: #ead2ac;
+    background-color: #E38DDD;
     border: none;
     border-radius: 25px;
     font-family: 'Josefin Sans', sans-serif;
     font-size: xx-large;
     text-align: center;
-    height: 60px;
+    height: 45px;
+}
+
+#string {
+    width: 400px;
 }
 
 h2 {
     font-family: 'Josefin Slab', serif;
-    font-size: 28px;
+    font-size: 24px;
     text-align: center;
 }
 
@@ -98,5 +104,5 @@ footer {
 }
 
 .img-footer {
-    width: 100px;
+    width: 75px;
 }
