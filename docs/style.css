@@ -1,0 +1,113 @@
+:root {
+    background-color: #EFCDFF;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+h1 {
+    font-family: 'Josefin Slab', serif;
+    font-size: 64px;
+    text-align: center;
+}
+
+.cat {
+    width: 120px;
+}
+
+.tematica {
+    display: flex;
+    width: 85%;
+    height: 400px;
+    margin: 75px;
+}
+
+.textos {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 22px;
+    padding: 24px;
+}
+
+.censor {
+    width: 180px;
+    height: 180px;
+    padding: 48px;
+}
+
+p {
+    margin: 18px;
+}
+
+.inputs {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background: linear-gradient(180deg, #A584FF 10%, #3A29A3 90%);
+    border-radius: 25px;
+    font-family: 'Josefin Slab', serif;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    border: none;
+    width: 200px;
+    height: 45px;
+    margin: 45px;
+}
+
+.funciones {
+    display: flex;
+    justify-content: center;
+}
+
+.cipher {
+    background-color: #E38DDD;
+    border: none;
+    border-radius: 25px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: xx-large;
+    text-align: center;
+    height: 45px;
+}
+
+#string {
+    width: 400px;
+}
+
+h2 {
+    font-family: 'Josefin Slab', serif;
+    font-size: 24px;
+    text-align: center;
+}
+
+.resultado {
+    display: flex;
+    justify-content: center;
+}
+
+#output {
+    width: 500px;
+}
+
+.copiar {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.img-footer {
+    width: 75px;
+}
